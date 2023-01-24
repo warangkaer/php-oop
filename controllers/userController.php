@@ -3,7 +3,7 @@ namespace Controllers;
 
 use DB\Query;
 
-require '../database/query.php';
+require '../database/Query.php';
 
 class UserController{
     public function index(){
