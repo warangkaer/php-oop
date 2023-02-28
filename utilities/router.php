@@ -30,11 +30,11 @@ class Router{
     $methodExists = method_exists("Controllers\\{$controller}", $method);
     if(!$controllerExists){
       echo "there is no {$controller} controller";
-      return;
+      exit();
     }
     if(!$methodExists){
       echo "there is no {$method} method";
-      return;
+      exit();
     }
 
     return [$controller, $method];
@@ -43,6 +43,11 @@ class Router{
   public static function get($uri, $handler){
     // call static method
     $lala = (new Router)->handler($handler);
+    
+  }
+
+  public static function post($uri, $handler){
+
   }
 }
 
